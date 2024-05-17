@@ -1,24 +1,18 @@
 <template>
-    <div>
-    <h1>{{ titulo }}</h1>
-    <button @click="incrementar">Incrementar</button>
-    <p>Contador: {{ contador }}</p>
+    <div class="container">
+        <h1 class="text-center">Bienvenidos al curso de Vue</h1>
+        <RouterLink to="padre">
+            <button class="btn btn-primary">Tutorial 2</button>
+        </RouterLink>
     </div>
-    </template>
-    <script setup>
-    import { ref } from 'vue'
-    const titulo = 'Componente con script setup'
-    const contador = ref(0)
-    function incrementar() {
-    contador.value++
-    }
-    </script>
-    <style scoped>
+</template>
+
+<style scoped>
     h1 {
-    color: blue;
+    color: #3498db;
     }
-    p {
-    color: green;
-    }
-    </style>
-    
+
+</style>
+<script setup>
+import { RouterLink } from 'vue-router';
+</script>
